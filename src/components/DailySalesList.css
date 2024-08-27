@@ -1,0 +1,37 @@
+.chart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .controls {
+    margin-bottom: 20px;
+  }
+  
+  .chart-wrapper {
+    width: 60%;  /* 그래프의 너비 조정 */
+    height: 400px;  /* 그래프의 높이 조정 */
+    margin-bottom: 20px;  /* 그래프 아래 여백 추가 */
+  }
+  
+  .daily-sales-table {
+    width: 100%;  /* 표의 너비 조정 */
+    border-collapse: collapse;
+  }
+  
+  .daily-sales-table th, .daily-sales-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  .daily-sales-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+  
+  .total-row td {
+    font-weight: bold;
+    background-color: #e0e0e0;
+  }
+  

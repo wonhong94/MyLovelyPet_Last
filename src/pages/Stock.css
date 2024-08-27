@@ -1,0 +1,44 @@
+.stock-page {
+    padding: 20px;
+    /* margin-top: 50px; */
+    margin-bottom: 50px; /* 헤더 높이만큼 마진을 줌 */
+  }
+  
+  .filter-controls {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+  }
+  
+  .filter-dropdown {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px; /* 드롭다운 메뉴 간격 추가 */
+  }
+  
+  .stock-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+  }
+  
+  .stock-table th, .stock-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  .stock-table th {
+    background-color: #f2f2f2;
+    color: black;
+  }
+  
+  .stock-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .stock-table tr:hover {
+    background-color: #f1f1f1;
+  }

@@ -1,0 +1,65 @@
+.home {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  height: 100%; /* 전체 화면 높이 설정 */
+  margin-top: 10px; /* 헤더 높이만큼 마진을 줌 */
+  margin-bottom:10px;
+}
+
+.calendar-section {
+  flex: 3; /* 캘린더 섹션의 크기를 더 크게 조정 */
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+  position: relative; /* 월 매출을 달력 안에 배치하기 위해 position 설정 */
+}
+
+.actions {
+  display: flex;
+  gap: 5px; /* 버튼들을 서로 붙이기 위해 gap 제거 */
+  align-items: center; /* 수평 가운데 정렬 */
+  margin-bottom: 10px; /* 여백 설정 */
+}
+
+.action-btn {
+  background-color: #fff5ca;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: none;
+}
+
+.action-btn:hover {
+  background-color: #fff5ca; /* 마우스 오버 시에도 기존 색상 유지 */
+  color: black; /* 마우스 오버 시에도 기존 텍스트 색상 유지 */
+}
+
+.calendar {
+  display: flex;
+  justify-content: center;
+  margin-top: 0; /* 캘린더와 월 매출 사이에 간격 추가 */
+  margin-bottom: 20px; /* 캘린더 아래에 공간을 추가 */
+}
+
+
+.monthly-sales {
+  position: absolute; /* 달력 위에 배치 */
+  top: 0; /* 달력의 상단에 위치 */
+  right: 0; /* 달력의 오른쪽 상단에 위치 */
+  font-size: 14px; /* 글씨 크기를 작게 조정 */
+  margin-top: 10px;
+  font-weight: bold;
+  background-color: #fff; /* 배경색 추가 */
+  padding: 5px 10px;
+  border-radius: 5px;
+  white-space: nowrap; /* 월 매출 텍스트가 줄바꿈되지 않도록 설정 */
+}
+
+@media (max-width: 768px) { /* 모바일 화면 크기 설정 */
+  .notifications {
+      display: none; /* 모바일 화면에서 숨기기 */
+  }
+}

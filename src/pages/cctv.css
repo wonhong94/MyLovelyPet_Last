@@ -1,0 +1,103 @@
+.cctv-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: transparent; /* 배경 투명하게 설정 */
+    border: none; /* 컨테이너 테두리 제거 */
+    min-width: 640px; /* 최소 너비 설정 */
+    width: 100%; /* 너비를 100%로 설정하여 반응형 적용 */
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+}
+
+.cctv-video {
+    width: 100%;
+    max-width: 800px; /* 최대 너비 설정 */
+    min-width: 640px; /* 최소 너비 설정 */
+    height: 500px;
+    border: 5px solid white; /* 기본 비디오 테두리 (더 두껍게) */
+    border-radius: 8px;
+}
+
+/* 테두리 깜빡이는 애니메이션 */
+.blink-border {
+    animation: blink-border-animation 0.5s steps(2, start) infinite;
+}
+
+@keyframes blink-border-animation {
+    50% {
+        border-color: rgba(255, 0, 0, 0.8); /* 빨간색 테두리 */
+    }
+    100% {
+        border-color: transparent; /* 투명 테두리 */
+    }
+}
+
+/* 텍스트 깜빡이는 애니메이션 */
+.blink {
+    animation: blink-animation 1s steps(5, start) infinite;
+}
+
+@keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
+
+.motion-overlay {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: red; /* 빨간색 텍스트 */
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 
+        -1px -1px 0 #000,  
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000; /* 검정색 텍스트 테두리 */
+    pointer-events: none; /* 클릭 이벤트를 통과시킴 */
+}
+
+.time-overlay {
+    position: absolute;
+    bottom: 0px; /* 더 밑으로 내림 */
+    margin-bottom: -10px;
+    right: 10px;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 
+        -1px -1px 0 #000,  
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000; /* 검정색 텍스트 테두리 */
+    pointer-events: none; /* 클릭 이벤트를 통과시킴 */
+}
+
+/* 반응형 디자인을 위한 미디어 쿼리 */
+@media (max-width: 768px) {
+    .cctv-container {
+        padding: 10px; /* 작은 화면에서 패딩 감소 */
+    }
+
+    .cctv-video {
+        max-width: 100%; /* 비디오 너비를 100%로 설정 */
+        min-width: 0; /* 작은 화면에서 최소 너비 해제 */
+    }
+
+    .motion-overlay {
+        font-size: 1.5rem; /* 작은 화면에서 글꼴 크기 감소 */
+    }
+
+    .time-overlay {
+        font-size: 1rem; /* 작은 화면에서 글꼴 크기 감소 */
+    }
+}

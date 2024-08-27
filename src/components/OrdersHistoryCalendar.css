@@ -1,0 +1,57 @@
+.orders-history-calendar {
+  width: 100%;
+  max-width: 400px; /* 캘린더의 최대 너비를 줄입니다 */
+  background-color: white;
+  border: 1px solid #a0a096;
+  border-radius: 0px; /* 모서리를 각지게 만듭니다 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  font-size: 1rem; /* 폰트 크기를 줄입니다 */
+}
+
+.orders-history-calendar .react-calendar__navigation button {
+  color: black;
+  min-width: 44px;
+  background: none;
+  font-size: 1rem;
+  margin-top: 8px;
+}
+
+/* 마우스 오버 시에도 년도와 월이 검정색으로 유지되도록 */
+.orders-history-calendar .react-calendar__navigation button:enabled:hover,
+.orders-history-calendar .react-calendar__navigation button:enabled:focus {
+  color: black;
+}
+
+.orders-history-calendar .react-calendar__tile {
+  max-width: 100%;
+  padding: 5px 3.3333px; /* 타일의 패딩을 줄입니다 */
+  background: none;
+  text-align: center;
+  line-height: 16px;
+  color: black;
+}
+
+/* 주말 타일 스타일링 */
+.orders-history-calendar .react-calendar__tile--weekend {
+  color: red !important;
+}
+
+.orders-history-calendar .react-calendar__tile--now {
+  background: #ffff76;
+  border-radius: 0px;
+}
+
+.orders-history-calendar .react-calendar__tile--active {
+  background: #006edc;
+  color: white;
+  border-radius: 0px;
+}
+
+.orders-history-calendar .react-calendar__tile--hasActive {
+  background: #006edc;
+}
+
+.orders-history-calendar .react-calendar__tile--hover {
+  background: #e6e6e6;
+}
