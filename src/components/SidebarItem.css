@@ -1,0 +1,64 @@
+.sidebar-item {
+  margin-bottom: 10px;
+  text-decoration-line: none;
+}
+
+.sidebar-title {
+  cursor: pointer;
+  padding: 10px;
+  background-color: #e9ecef;
+  border-radius: 4px;
+}
+
+.sidebar-title:hover {
+  background-color: #ffeca0;
+  color: white;
+}
+
+.sidebar-submenu {
+  list-style: none;
+  padding: 0;
+  padding-left: 10px;
+}
+
+.sidebar-submenu li {
+  margin-bottom: 5px;
+}
+
+.sidebar-submenu li a {
+  color: black; /* 하위 메뉴 글씨 색상 검정색으로 설정 */
+  text-decoration: none;
+}
+
+.sidebar-item {
+  position: relative;
+}
+
+.sidebar-title {
+  cursor: pointer;
+  padding: 10px;
+  background-color: white;
+  border-radius: 4px;
+  margin-bottom: 5px;
+  transition: background-color 0.2s; /* 부드러운 배경 색상 전환 */
+}
+
+.sidebar-title:hover {
+  background-color: #ffeca0;
+  color: white;
+}
+
+.sidebar-item.selected .sidebar-title {
+  background-color: #ffeca0; /* 선택된 항목의 배경 색상 */
+  color: white; /* 선택된 항목의 텍스트 색상 */
+}
+
+.sidebar-submenu {
+  list-style: none;
+  padding: 0;
+  padding-left: 10px;
+}
+
+.sidebar-submenu li {
+  margin-bottom: 5px;
+}

@@ -1,0 +1,92 @@
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
+  font-family: Toss Product Sans, Tossface, -apple-system, BlinkMacSystemFont,
+    Bazier Square, Noto Sans KR, Segoe UI, Apple SD Gothic Neo, Roboto,
+    Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji,
+    Segoe UI Symbol, Noto Color Emoji;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  word-break: keep-all;
+  word-wrap: break-word;
+}
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+
+
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* 전체 높이를 차지 */
+  position: relative;
+}
+
+.main-top-half {
+  width: 100%;
+  height: 50%; /* 화면의 위쪽 절반 */
+  background-color: #FFFFFF; /* 위쪽 절반의 배경색 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.main-bottom-half {
+  width: 100%;
+  height: 50%; /* 화면의 아래쪽 절반 */
+  background-color: #FFECA0; /* 아래쪽 절반의 배경색 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.main-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* 이미지가 컨테이너를 덮도록 설정 */
+  margin-top: 80px;
+}
+
+.Main_button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 25px;
+  border: 1px solid black; /* 테두리를 검은색으로 설정 */
+  background-color: #FFFFFF;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  z-index: 1; /* 버튼이 이미지 위에 오도록 설정 */
+}
+
+.Main_button:hover {
+  background-color: #e5e676;
+}
+
+.kioskmain-center-text-bar {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% - 40px); /* 양쪽 20px 여백을 위한 너비 계산 */
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 25px;
+  background-color: #FFE26F;
+  color: black;
+  text-align: center;
+  z-index: 2; /* 텍스트 바가 다른 콘텐츠 위에 오도록 설정 */
+}

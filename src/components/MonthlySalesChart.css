@@ -1,0 +1,46 @@
+.chart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .controls {
+    margin-bottom: 20px;
+  }
+  
+  .chart-wrapper {
+    width: 70%;  /* 그래프의 너비를 약간 늘림 */
+    height: 400px;  /* 그래프의 높이 유지 */
+    margin-bottom: 30px;  /* 그래프 아래 여백을 조금 더 추가 */
+  }
+  
+  .monthly-sales-table {
+    width: 70%;  /* 표의 너비를 그래프와 맞춤 */
+    border-collapse: collapse;
+    margin-bottom: 20px;  /* 표 아래 여백 추가 */
+  }
+  
+  .monthly-sales-table th, .monthly-sales-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;  /* 중앙 정렬로 변경 */
+  }
+  
+  .monthly-sales-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+  
+  .monthly-sales-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .monthly-sales-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .total-row {
+    font-weight: bold;
+    background-color: #e0e0e0;
+  }
+  

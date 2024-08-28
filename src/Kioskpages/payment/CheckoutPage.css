@@ -1,0 +1,94 @@
+/* 전체 페이지를 감싸는 컨테이너 */
+.wrapper {
+  max-width: 100%;
+  margin: 0 auto;
+  position: relative; /* 최상위 요소로 둔 것처럼 위치를 제어 */
+  z-index: 1; /* 다른 요소 위에 나타나도록 */
+}
+
+/* 배경을 분할하는 스타일 */
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* 배경이 뒤로 가도록 설정 */
+}
+
+/* 상단 50% 하얀색 */
+.background .top-half {
+  background-color: white;
+  height: 50%;
+}
+
+/* 하단 50% 노란색 */
+.background .bottom-half {
+  background-color: #FFECA0;
+  height: 50%;
+}
+
+.checkout-box_section {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgb(0 0 0 / 1%), 0 6px 6px rgb(0 0 0 / 6%);
+  padding: 50px;
+  margin: 50px auto; /* 중앙 정렬을 위해 margin을 auto로 설정 */
+  color: #333d4b;
+  align-items: center;
+  text-align: center;
+  position: relative; /* 다른 요소와 겹치지 않도록 */
+  z-index: 1; /* 최상위로 유지 */
+  white-space: nowrap;
+  max-width: 800px; /* 적절한 최대 너비 설정 */
+  width: 100%; /* 너비를 100%로 설정하여 반응형으로 유지 */
+}
+
+.Check_button {
+  color: #000000;
+  background-color: #ffffff;
+  margin: 30px 15px 0px 15px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 18px;
+  white-space: nowrap;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid black;
+  user-select: none;
+  transition: background 0.2s ease, color 0.1s ease;
+  text-decoration: none;
+  border-radius: 7px;
+  padding: 11px 16px;
+  width: 250px;
+  position: relative; /* 다른 요소와 겹치지 않도록 */
+  z-index: 1; /* 최상위로 유지 */
+}
+
+/* 작은 화면일 때 */
+@media only screen and (max-width: 768px) {
+  .checkout-box_section {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 30px; /* 작은 화면에 맞게 padding 조정 */
+    max-width: 90%; /* 작은 화면에서는 최대 너비를 90%로 설정 */
+  }
+}
+
+/* 중간 화면일 때 */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .checkout-box_section {
+    margin: 50px auto;
+    padding: 40px; /* 중간 화면에 맞게 padding 조정 */
+    max-width: 90%; /* 중간 화면에서는 최대 너비를 90%로 설정 */
+  }
+}
+
+/* 큰 화면일 때 */
+@media only screen and (min-width: 1025px) {
+  .checkout-box_section {
+    margin: 50px auto;
+    padding: 50px;
+    max-width: 800px; /* 큰 화면에서는 최대 너비를 800px로 고정 */
+  }
+}

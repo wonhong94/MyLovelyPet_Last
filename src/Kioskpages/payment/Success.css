@@ -1,0 +1,170 @@
+/* 전체 페이지를 감싸는 컨테이너 */
+.wrapper {
+  max-width: 100%;
+  margin: 0 auto;
+  position: relative; /* 최상위 요소로 둔 것처럼 위치를 제어 */
+  z-index: 1; /* 다른 요소 위에 나타나도록 */
+}
+
+/* 배경을 분할하는 스타일 */
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* 배경이 뒤로 가도록 설정 */
+}
+
+/* 상단 50% 하얀색 */
+.background .top-half {
+  background-color: white;
+  height: 50%;
+}
+
+/* 하단 50% 노란색 */
+.background .bottom-half {
+  background-color: #FFECA0;
+  height: 50%;
+}
+
+.success-box_section {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgb(0 0 0 / 1%), 0 6px 6px rgb(0 0 0 / 6%);
+  padding: 50px;
+  margin: 50px auto; /* 상단과 하단 고정된 margin으로 설정 */
+  color: #333d4b;
+  align-items: center;
+  text-align: center;
+  position: relative; /* 다른 요소와 겹치지 않도록 */
+  top: 50px; /* 이 값을 조정하여 섹션을 아래로 이동 */
+  z-index: 1; /* 최상위로 유지 */
+  white-space: nowrap;
+  max-width: 800px; /* box_section의 최대 너비 고정 */
+}
+
+/* 반응형 디자인 - 작은 화면 */
+@media only screen and (max-width: 768px) {
+  .success-box_section {
+    padding: 30px; /* 패딩을 줄여서 작은 화면에 맞춤 */
+    margin: 3px 10px; /* 상단과 하단의 마진을 줄임 */
+    max-width: 100%; /* 최대 너비를 100%로 설정하여 화면에 꽉 차도록 */
+  }
+
+  .styled-table th,
+  .styled-table td {
+    padding: 8px 10px;
+    font-size: 12px; /* 폰트 크기 줄임 */
+  }
+
+  .styled-table-container {
+    margin-top: 20px;
+  }
+}
+
+/* 반응형 디자인 - 중간 화면 */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .success-box_section {
+    padding: 40px; /* 중간 화면에 맞게 패딩 조정 */
+    margin: 40px auto; /* 상단과 하단의 마진을 조정 */
+    max-width: 90%; /* 최대 너비를 90%로 설정하여 화면에 적절히 맞춤 */
+  }
+
+  .styled-table th,
+  .styled-table td {
+    padding: 10px 12px;
+    font-size: 14px; /* 폰트 크기 조정 */
+  }
+}
+
+/* 반응형 디자인 - 큰 화면 */
+@media only screen and (min-width: 1025px) {
+  .success-box_section {
+    padding: 50px;
+    margin: 50px auto;
+    max-width: 800px; /* 큰 화면에서는 800px로 고정 */
+  }
+
+  .styled-table th,
+  .styled-table td {
+    padding: 12px 15px;
+    font-size: 16px; /* 큰 화면에서 기본 폰트 크기 유지 */
+  }
+}
+
+/* 테이블 스타일 수정 */
+.styled-table-container {
+  width: 100%;
+  overflow-x: auto; /* 테이블이 화면을 넘어서면 스크롤 가능하도록 설정 */
+}
+
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 18px;
+  text-align: left;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.styled-table thead tr {
+  position: relative;
+  background-color: #FFECA0;
+  color: black;
+  text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 12px 15px;
+  max-width: 150px; /* 상품명 셀의 최대 너비 설정 */
+  white-space: nowrap; /* 텍스트 줄바꿈 방지 */
+  overflow: hidden; /* 넘치는 텍스트 숨김 */
+  text-overflow: ellipsis; /* 넘치는 텍스트를 '...'으로 표시 */
+}
+
+.styled-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+
+.styled-table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+.home-button-container {
+  display: flex;
+  justify-content: center; /* 버튼을 중앙에 정렬 */
+  margin-top: 10px; /* 테이블과 버튼 사이의 간격을 줄임 */
+  margin-bottom: 235px; /* 버튼과 화면 하단 사이에 간격 추가 */
+}
+
+.home-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #fff; /* 버튼 배경색 */
+  color: black; /* 버튼 글자색 */
+  border: purple solid 0.5px;
+  border-radius: 5px;
+  display: flex;
+  margin:50px;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+}
+
+.home-button:hover {
+  background-color: #0056b3; /* 버튼 호버 시 배경색 */
+}

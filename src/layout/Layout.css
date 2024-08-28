@@ -1,0 +1,63 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin-top: 100px;
+}
+
+.layout-content {
+  display: flex;
+  flex: 1;
+  margin-top: 50px; /* 헤더 높이만큼 마진을 줌 */
+}
+
+.header {
+  flex-shrink: 1;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000; 
+
+}
+
+.sidebar {
+  flex-shrink: 0;
+  width: 250px;
+  height: calc(100vh - 100px); /* 헤더를 제외한 높이 */
+  /* position: fixed; */
+  top: 50px; /* 헤더 높이 */
+  left: 0;
+  overflow-y: auto; /* 사이드바에 스크롤 추가 */
+  scrollbar-width: none;
+  z-index: 900; /* 헤더보다 낮은 z-index 설정 */
+  transition: width 0.3s; /* 애니메이션 효과 */
+  background-color: white;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+  margin-left: 250px; /* 사이드바 너비만큼 마진을 줌 */
+  margin-top: 100px; /* 헤더 높이만큼 마진을 줌 */
+}
+.layout.sidebar-closed .main-content {
+  margin-left: 60px; /* 사이드바가 닫혔을 때의 마진 */
+}
+/* .footer {
+  flex-shrink: 0;
+  margin-top: auto;
+  margin-left:50;
+  z-index: 1000; 
+} */
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+}

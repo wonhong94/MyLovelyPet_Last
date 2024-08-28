@@ -1,0 +1,98 @@
+.orders-history {
+  padding: 20px;
+ 
+}
+
+.orders-history h2 {
+  margin-bottom: 20px;
+}
+
+.order-section {
+  margin-bottom: 30px;
+}
+
+.order-section h3 {
+  margin-bottom: 10px;
+}
+
+.orders-history table {
+  margin-top: 20px;
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.orders-history table, .orders-history th, .orders-history td {
+  border: 1px solid #ddd;
+}
+
+.orders-history th, .orders-history td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.orders-history th {
+  background-color: #f2f2f2;
+}
+
+/* button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+button:hover {
+  background-color: #0056b3;
+} */
+
+/* 캘린더 스타일링 */
+/* .orders-calendar {
+  width: 100%;
+  max-width: 500px;
+  background-color: white;
+  border: 1px solid #a0a096;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  font-size: 1.2rem; /* 폰트 크기를 키워서 잘리지 않도록 함 */
+/* }
+
+.orders-calendar .react-calendar__navigation button {
+  color: #6f48eb;
+  min-width: 44px;
+  background: none;
+  font-size: 1rem;
+  margin-top: 8px;
+}
+
+.orders-calendar .react-calendar__tile {
+  max-width: 100%;
+  padding: 10px 6.6667px;
+  background: none;
+  text-align: center;
+  line-height: 16px;
+}
+
+.orders-calendar .react-calendar__tile--now {
+  background: #ffff76;
+  border-radius: 6px;
+}
+
+.orders-calendar .react-calendar__tile--active {
+  background: #006edc;
+  color: white;
+  border-radius: 6px;
+}
+
+.orders-calendar .react-calendar__tile--hasActive {
+  background: #006edc;
+}
+
+.orders-calendar .react-calendar__tile--hover {
+  background: #e6e6e6;
+} */

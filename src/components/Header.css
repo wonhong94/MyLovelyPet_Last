@@ -1,0 +1,51 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px; /* 패딩 상단과 하단을 0으로 설정 */
+  background-color: white;
+  height: 100px; /* 헤더 높이를 줄임 */
+  z-index: 1002;
+  position: relative;
+}
+
+.header-logo {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center; /* 로고를 중앙에 위치 */
+  margin-top: 10px; /* 로고를 더 위로 올리기 위해 음수 값 사용 */
+}
+
+.header-right {
+  display: flex;
+  gap: 10px;
+  position: absolute; /* 헤더 오른쪽에 고정 */
+  right: 80px; /* 헤더 오른쪽 끝에서 조금 떨어뜨림 */
+  align-items: center; /* 아이콘과 텍스트를 수평 정렬 */
+  margin-top: 20px;
+}
+
+.logout-text {
+  font-size: 20px;
+  color: black;
+  cursor: pointer; /* 마우스를 올렸을 때 포인터 표시 */
+  transition: color 0.3s; /* 색상 변화 효과 */
+  right: 40px;
+}
+
+.logout-text:hover {
+  color: #b08968; /* 마우스를 올렸을 때 색상 변경 */
+}
+
+.logo-image {
+  height: 90px; /* 로고 이미지의 크기를 헤더 높이에 맞게 조정 */
+  width: auto;
+  margin-top: 0; /* 로고 이미지 위의 기본 여백 제거 */
+}
+
+.alarm-icon {
+  height: 30px; /* 알림 아이콘 크기 조정 */
+  width: 25px; /* 비율에 맞게 크기 설정 */
+  display: inline-block; /* 이미지를 인라인 블록으로 표시 */
+  margin-top: 5px; /* 이미지를 위로 올리기 위해 하단 마진을 양수로 설정 */
+}

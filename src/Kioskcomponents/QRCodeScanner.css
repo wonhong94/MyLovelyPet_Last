@@ -1,0 +1,63 @@
+
+
+.video {
+  display: none;
+  width: 100%;
+  height: auto;
+  transform: scaleX(-1);
+}
+
+.canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  transform: scaleX(-1);
+}
+
+/* 반응형 디자인 */
+
+@media only screen and (max-width: 480px) {
+
+  .canvas {
+    top: -90px !important;
+    left: 50% !important; /* 화면 중앙으로 이동 */
+    transform: translate(-50%) scaleX(-1) !important; /* 중앙 정렬 유지 및 수평 반전 */
+    width: 80% !important;
+    height: 230px !important;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+
+  .canvas {
+    top: -90px !important;
+    left: 50% !important; /* 화면 중앙으로 이동 */
+    transform: translate(-50%) scaleX(-1) !important; /* 중앙 정렬 유지 및 수평 반전 */
+    width: 80% !important;
+    height: 230px !important;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+
+  .canvas {
+    top: -90px !important;
+    left: 50% !important; /* 화면 중앙으로 이동 */
+    transform: translate(-50%) scaleX(-1) !important; /* 중앙 정렬 유지 및 수평 반전 */
+    width: 90% !important;
+    height: 280px !important;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+
+  .canvas {
+    top: -90px !important;
+    left: 50% !important; /* 화면 중앙으로 이동 */
+    transform: translate(-50%) scaleX(-1) !important; /* 중앙 정렬 유지 및 수평 반전 */
+    width: 100% !important;
+    height: 250px !important;
+  }
+}

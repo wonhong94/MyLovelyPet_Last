@@ -1,0 +1,32 @@
+.kiosk-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #FFECA0;
+  padding: 5px;
+}
+
+.back-button {
+  left: 10px;
+  bottom: 10px;
+  padding: 8px 16px;
+  background-color: #FFECA0;
+  color: #000000;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.back-button:hover {
+  background-color: #0056b3;
+}
+
+.wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  min-height: 100vh; /* 최소 높이를 화면 전체로 설정 */
+  display: flex;
+  flex-direction: column; /* column 방향으로 요소 배치 */
+  justify-content: space-between; /* 위쪽과 아래쪽 요소 사이에 공간 분배 */
+}

@@ -1,0 +1,107 @@
+.orders {
+  padding: 20px;
+ 
+}
+
+.orders h2 {
+  margin-bottom: 20px;
+}
+
+.category-section {
+  margin-bottom: 30px;
+}
+
+.category-section h3 {
+  margin-bottom: 10px;
+}
+
+.orders table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+.orders table th, .orders table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.orders table th {
+  background-color: #f2f2f2;
+  color: black;
+}
+
+.orders table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.orders table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.orders input[type="number"] {
+  width: 60px;
+  padding: 5px;
+}
+
+.orders button {
+  padding: 10px 20px;
+  background-color: #d0ac88;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.orders button:hover {
+  background-color: #d0ac88;
+}
+
+/* 모달 스타일 */
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  text-align: center;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.modal h2 {
+  margin-bottom: 10px;
+}
+
+.modal p {
+  margin: 10px 0;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.modal-buttons button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-buttons button:hover {
+  background-color: #0056b3;
+}

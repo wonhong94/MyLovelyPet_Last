@@ -1,0 +1,125 @@
+:root {
+  --sidebar-bg-color: rgba(255, 255, 255, 0.1); /* 사이드바 기본 배경색을 반투명하게 변경 */
+  --sidebar-blur: 10px; /* 블러 강도 */
+  --sidebar-width: 250px;
+  --header-height: 100px;
+  --active-text-color: #b08968; /* 선택된 메뉴의 텍스트 색상 */
+  --menu-padding: 10px; /* 메뉴 항목의 패딩 */
+  --menu-border-radius-left: 15px; /* 메뉴 항목의 왼쪽 모서리 둥글게 */
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: var(--header-height);
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  z-index: 2000; /* 헤더의 z-index를 높여 사이드바를 덮도록 설정 */
+}
+
+.sidebar {
+  position: fixed;
+  top: var(--header-height);
+  left: 0;
+  height: calc(100vh - var(--header-height)); 
+  background-color: var(--sidebar-bg-color);
+  backdrop-filter: blur(var(--sidebar-blur));
+  width: var(--sidebar-width);
+  overflow-y: auto;
+  z-index: 1001;
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+
+.sidebar-content {
+  padding-top: 100px; /* 메뉴 상단의 패딩을 줄여 위로 올리기 */
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.sidebar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+  margin-top: var(--header-height);
+  margin-left: var(--sidebar-width);
+  overflow-y: auto;
+  background-color: var(--content-bg-color);
+}
+
+.sidebar-item {
+  margin-bottom: 0;
+  text-align: left;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.sidebar-title {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  color: #000000;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.sidebar-title .icon {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.sidebar-title.active {
+  color: var(--active-text-color);
+}
+
+.sidebar-submenu {
+  list-style: none;
+  padding-left: 20px;
+  padding-top: 5px;
+  background-color: transparent;
+  width: 100%;
+}
+
+.sidebar-submenu li {
+  margin-bottom: 0;
+}
+
+.sidebar-submenu li a {
+  color: #000000;
+  text-decoration: none;
+  display: block;
+  padding: 5px 0;
+  background-color: transparent;
+  font-size: 16px;
+}
+
+.sidebar-submenu li.active a {
+  color: var(--active-text-color);
+}
+
+.sidebar-item.active .sidebar-title {
+  color: var(--active-text-color);
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+  }
+
+  .main-content {
+    margin-left: 0;
+    margin-top: 100px;
+  }
+}

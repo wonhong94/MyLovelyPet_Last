@@ -1,0 +1,53 @@
+.notification {
+    padding: 20px;
+  }
+  
+  .notification-header {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+  }
+  
+  .notification-header .delete-all {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .notification-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .notification-item {
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .notification-item.warning {
+    background-color: #ffc107;
+  }
+  
+  .notification-item.danger {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .notification-item.info {
+    background-color: #17a2b8;
+    color: white;
+  }
+  
+  .notification-item .close-btn {
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+  }
